@@ -1,8 +1,6 @@
 package com.springboot.bookstore.model.user;
 
 import jakarta.persistence.*;
-import org.apache.catalina.User;
-
 @Entity
 @Table(name = "user")
 public class UserModel {
@@ -52,6 +50,3 @@ public class UserModel {
         this.email = email;
     }
 }
-
-//Créez une entité Utilisateur avec les attributs suivants : id (Long), nom (String), prénom (String), et email (String).
-
