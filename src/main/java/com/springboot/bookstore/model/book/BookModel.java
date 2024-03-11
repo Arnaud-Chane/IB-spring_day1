@@ -1,15 +1,7 @@
 package com.springboot.bookstore.model.book;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
-@Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
 @Entity
 @Table(name = "book")
 public class BookModel {
@@ -20,7 +12,44 @@ public class BookModel {
     private String title;
     private String author;
     private Integer release_year;
+
+    public BookModel() {}
+
+    public BookModel(String title, String author, Integer release_year){
+        this.title = title;
+        this.author = author;
+        this.release_year = release_year;
+    }
+
+    public Integer getBook_id() {
+        return book_id;
+    }
+
+    public void setBook_id(Integer book_id) {
+        this.book_id = book_id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public Integer getRelease_year() {
+        return release_year;
+    }
+
+    public void setRelease_year(Integer release_year) {
+        this.release_year = release_year;
+    }
 }
-
-
-//Créez une entité Livre avec les attributs suivants : id (Long), titre (String), auteur (String), et année de publication (Integer).
